@@ -1,10 +1,21 @@
 const express = require("express");
 const app = express();
-
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
 //import routes
 const authRoute = require("./routes/auth");
 
-//import middlewares
+dotenv.config();
+
+// Connect to MongoDB
+mongoose.connect(process.env.DB_CONNECT,{ useNewUrlParser: true }, ()=>{
+    console.log("Successfully connected to database");
+});
+
+// Middlewares
+app.use(express.json());
+
+//Route middlewares
 app.use("/api/user",authRoute);
 
 app.get("/",(req,res)=>{
@@ -14,3 +25,4 @@ app.get("/",(req,res)=>{
 app.listen(3000,()=>{
     console.log("Hola, Server started on PORT 3000!");
 });
+
