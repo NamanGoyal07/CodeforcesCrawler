@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 //import routes
 const authRoute = require("./routes/auth");
-
+const postRoute = require('./routes/posts');
 dotenv.config();
 
 // Connect to MongoDB
@@ -17,6 +17,7 @@ app.use(express.json());
 
 //Route middlewares
 app.use("/api/user",authRoute);
+app.use('/api/posts', postRoute);
 
 app.get("/",(req,res)=>{
     res.send("hello");
