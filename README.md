@@ -2,7 +2,6 @@
 # Built with
 <li>Nodejs</li>
 <li>MongoDB</li>
-<li>React</li>
 <li>JWT Authentication</li>
 
 # Installation
