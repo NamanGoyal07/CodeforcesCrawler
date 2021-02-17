@@ -10,7 +10,7 @@ To install this project on your local desktop, clone this repositor and include 
 ---
 **NOTE**
 <ol>
-  <li><span style="color: green">MONGODB_URI = "Your database link"</span></li>
-  <li><span style="color: green">JWT_SECRET = "Some random string"</span></li>
+  <li><span style="color: green">DB_CONNECT = "Your database link"</span></li>
+  <li><span style="color: green">TOKEN_SECRET = "Some random string"</span></li>
 
 ---
